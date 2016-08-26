@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0
+        }
+
+        ul {
+            list-style: none
+        }
+
+        body {
+            background-color: #333;
+        }
+
+        .nav li {
+            width: 83px;
+            height: 42px;
+            text-align: center;
+            line-height: 42px;
+            float: left;
+            cursor: pointer;
+        }
+
+        .nav span {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 83px;
+            height: 42px;
+            background: url(../images/cloud.gif) no-repeat;
+        }
+
+        ul {
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+<div class="nav">
+    <span id="cloud"></span>
+    <ul id="navBar">
+        <li>北京校区</li>
+        <li>上海校区</li>
+        <li>广州校区</li>
+        <li>深圳校区</li>
+        <li>武汉校区</li>
+        <li>关于我们</li>
+        <li>联系我们</li>
+        <li>招贤纳士</li>
+    </ul>
+</div>
+<script>
+    function my$(id) {
+        return document.getElementById(id);
+    }
+    function animate(element, target) {
+        //清除定时器
+        if(element.timerId) {
+            clearInterval(element.timerId);
+        }
+
+        element.timerId = setInterval(function () {
+            var current = element.offsetLeft;
+            var step = (target - current) / 5;
+
+            console.log("current:" + current + "  step:" + step);
+            step = step > 0 ? Math.ceil(step) : Math.floor(step);
+            current += step;
+            element.style.left = current + "px";
+
+            if(step === 0) {
+                clearInterval(element.timerId);
+            }
+        },15);
+    }
+
+    //获取元素
+    var cloud = my$("cloud");
+    var navBar = my$("navBar");
+
+    //记录鼠标点击的时候的位置
+    var target = 0;
+    //1 给所有li注册事件
+    for (var i = 0; i < navBar.children.length; i++) {
+        var li = navBar.children[i];
+
+        //
+        li.onmouseover = function () {
+            //鼠标放到li上，让clound 也到当前li的位置
+            animate(cloud, this.offsetLeft);
+        };
+
+        li.onmouseout = function () {
+            //鼠标离开回到原来的位置
+            animate(cloud, target);
+        };
+
+        li.onclick = function () {
+            target = this.offsetLeft;
+
+        }
+    }
+
+</script>
+</body>
+</html>

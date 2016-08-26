@@ -1,0 +1,500 @@
+    @charset "UTF-8";
+    /*css 初始化 */
+    html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img {
+        margin: 0;
+        padding: 0;
+    }
+
+    fieldset, img, input, button { 			/*fieldset组合表单中的相关元素*/
+        border: none;
+        padding: 0;
+        margin: 0;
+        outline-style: none;
+    }
+
+    ul, ol {
+        list-style: none;				/*清除列表风格*/
+    }
+
+    input {
+        padding-top: 0;
+        padding-bottom: 0;
+        font-family: "SimSun", "宋体";
+        outline: none;
+        border: none;
+    }
+
+    select, input {
+        vertical-align: middle;
+        outline: none;
+        border: 0;
+    }
+
+    select, input, textarea {
+        font-size: 12px;
+        margin: 0;
+    }
+
+    textarea {
+        resize: none;
+    }
+
+    /*防止多行文本框拖动*/
+    img {
+        border: 0;
+        vertical-align: middle;
+        outline: none;
+    }
+
+    /*  去掉图片低测默认的3像素空白缝隙*/
+    table {
+        border-collapse: collapse;			/*合并外边线*/
+    }
+
+
+    body {
+        font: 12px/150% Arial, Verdana, "\5b8b\4f53";	/*宋体，Unicode，统一码*/
+        color: #666;
+        background: #fff
+    }
+
+    .clearfix:before, .clearfix:after {
+        content: "";
+        display: table;
+    }
+
+    .clearfix:after {
+        clear: both;
+    }
+
+    .clearfix {
+        *zoom: 1; /*IE/7/6*/
+    }
+
+    a {
+        color: #666;
+        text-decoration: none;
+        outline: none;
+    }
+
+    a:hover {
+        color: #3a9900;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        text-decoration: none;
+        font-weight: normal;
+        font-size: 100%;
+    }
+
+    s, i, em, b {
+        font-style: normal;
+        text-decoration: none;
+    }
+
+    .col-red {
+        color: #C81623 !important;
+    }
+
+    /*公共类*/
+    .lcfw {
+        /*版心 提取 */
+        width: 1210px;
+        margin: 0 auto;
+    }
+
+    .fl {
+        float: left;
+    }
+
+    .fr {
+        float: right;
+    }
+
+    .al {
+        text-align: left;
+    }
+
+    .ac {
+        text-align: center;
+    }
+
+    .ar {
+        text-align: right;
+    }
+
+    .hide {
+        display: none;
+    }
+    .show{
+        display: block;
+    }
+    /*头部广告 begin*/
+    .topAd{
+        width: 100%;
+    }
+    .topAd a{
+        display: inline-block;
+        text-indent: -9999em;
+    }
+    .topAdBig{
+        display: block;
+    }
+    .topAdBig a{
+        display: inline-block;
+        height: 400px;
+        width: 100%;
+        background: url("../images/1466388269626.jpg") no-repeat;
+    }
+    .topAdSmall{
+        display: none;
+    }
+    .topAdSmall a{
+        display: inline-block;
+        height: 100px;
+        width: 100%;
+        background: url("../images/topbg.jpg") no-repeat;
+    }
+    /*头部广告 end*/
+
+    /*头部导航 begin*/
+    .top-navBar{
+        height: 32px;
+        line-height: 32px;
+        background: #F5F5F5;
+    }
+    .top-navBar-l li{
+        width: 160px;
+        position: relative;
+    }
+    .top-navBar-l .current-s{
+        padding: 0 15px;
+        background: url("../images/index.png") no-repeat -101px -9px;
+    }
+    .top-navBar-l-city{
+        z-index: 3;
+        position: absolute;
+        padding: 0 25px 0 10px;
+        height: 29px;
+        line-height: 29px;
+        border: 1px solid #F5F5F5;
+
+    }
+    .top-navBar-l  i{
+        position: absolute;
+        z-index: 99999;
+        top: 14px;
+        right: 20px;
+        width: 5px;
+        height: 3px;
+        background: url("../images/index.png") no-repeat -92px 0;
+    }
+    .top-navBar-l .current{
+        z-index: 99998;
+        position: absolute;
+        padding: 0 25px 0 10px;
+        height: 29px;
+        border: 1px solid #3a9900;
+        border-bottom: 1px solid #ffffff;
+        background: #ffffff;
+        padding-bottom: 2px;
+
+    }
+    /*城市*/
+    /*城市 begin*/
+    .top-navBar-l .citys{
+        display: none;
+        position: absolute;
+        top: 31px;
+        left: 90px;
+        _left: 90px;
+        z-index: 99997;
+        width: 260px;
+        border: 1px solid #3a9900;
+        padding: 6px 12px 6px 15px;
+        background: #fff;
+        color: #757575;
+
+    }
+    .top-navBar-l .citys p{
+        height: 20px;
+        line-height: 20px;
+    }
+    .top-navBar-l .citys p span{
+        font-weight: 700;
+    }
+    .top-navBar-l .citys-city{
+        margin-top: 10px;
+        height: 60px;
+    }
+    .top-navBar-l .current-left{
+        padding-top: 0px;
+        width: 60px;
+    }
+    .top-navBar-l .current-right{
+        width: 200px;
+    }
+    .top-navBar-l .current-right span{
+        display: inline-block;
+        height: 20px;
+        line-height: 20px;
+        padding: 0 5px;
+    }
+    .top-navBar-l .current-right span:hover{
+        background: #3a9900;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px; ;
+    }
+    .top-navBar-l .current-right span:hover a{
+        color: #ffffff;
+    }
+    .top-navBar-l .city-select{
+        margin-top: 40px;
+        width: 80px;
+        padding: 5px 15px 5px 10px;
+        height: 20px;
+        line-height: 20px;
+        border:1px solid #1FAD00;
+        cursor: pointer;
+        position: relative;
+        z-index: 99999;
+    }
+    .top-navBar-l .city-select b{
+        position: absolute;
+        width: 10px;
+        height: 6px;
+        right: 10px;
+        top: 12px;
+        z-index: 99999;
+        background: url("../images/index.png") no-repeat 0 -40px;
+    }
+    /*城市 end*/
+    .top-navBar-login{
+        padding-left: 15px;
+    }
+    .top-navBar-login a{
+        margin-right: 20px;
+    }
+    /*顶部右侧*/
+    /*顶部右侧*/
+    .nav-3 li{
+        float: left;
+        height: 32px;
+        line-height: 32px;
+        padding:0 12px 0 12px;
+    }
+    li.mycount{
+        position: relative;
+        padding: 0;
+        z-index: 99999;
+    }
+    li.mycount a{
+        position: relative;
+        z-index: 3;
+        display: inline-block;
+        height: 30px;
+        line-height: 30px;
+        padding: 0 20px 0 14px;
+        border: 1px solid #f5f5f5;
+    }
+    li.mycount i{
+        position: absolute;
+        right: 8px;
+        top: 14px;
+        width: 5px;
+        height: 3px;
+        background: url("../images/index.png") no-repeat -92px 0;
+    }
+    /*点击之后的样式*/
+    li.mycount .current{
+        padding: 0 20px 0 14px;
+        height: 29px;
+        padding-bottom: 1px;
+        line-height: 30px;
+        border: 1px solid #3a9900;
+        border-bottom: 1px solid #fff;
+        background: #fff;
+    }
+    /*我的账户*/
+    .my-account{
+        display: none;
+        position: absolute;
+        top: 31px;
+        left: 0px;
+        _left: 81px;
+        z-index: 2;
+        width: 180px;
+        border: 1px solid #3a9900;
+        padding: 6px 12px 6px 10px;
+        background: #fff;
+        color: #757575;
+    }
+    .my-account .my-login{
+        padding-left: 4px;
+    }
+    .my-account .my-login a{
+        padding:0 10px;
+        border: none;
+        color: #2d8800;
+    }
+    .my-account .my-login a:hover{
+        background: #3a9900;
+        color: #ffffff;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px; ;
+    }
+    .my-account  .my-money li{
+        padding: 0;
+        width: 90px;
+    }
+    .my-account  .my-money a{
+        padding: 0 5px;
+        float: left;
+        border: none;
+    }
+    .my-account  .my-money a:hover{
+        background: #3a9900;
+        color: #ffffff;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px; ;
+    }
+    .nav-3 .line{
+        padding: 0;
+        color: #E5DDE5;
+    }
+    li.top-shop-car{
+        padding-left: 25px;
+        position: relative;
+    }
+    .top-shop-car b{
+        position: absolute;
+        left: 11px;
+        top: 10px;
+        width: 11px;
+        height: 11px;
+        background: url("../images/index.png") no-repeat -78px 0;
+    }
+    .top-shop-car span{
+        font-size: 12px;
+    }
+    li.friendLink a:hover{
+        opacity: 0.6;
+        filter:Alpha(Opacity=600);
+    }
+    li.friendLink span{
+        display: inline-block;
+        width: 42px;
+        height: 17px;
+        background: url("../images/index.png") no-repeat;
+        margin-top: 8px;
+        margin-left: 12px;
+    }
+    li.friendLink span.zhongxin{
+        background-position: 0 -18px;
+    }
+    /*头部导航 end*/
+
+    /*头部logo begin*/
+    .header{
+        margin-top: 35px;
+    }
+    .header-logo{
+        height: 80px;
+        width: 380px;
+    }
+    .header-logo a{
+        text-indent: -99999em;
+    }
+    .header-logo a.logo-link{
+        display: inline-block;
+        width: 210px;
+        height: 80px;
+        background: url("../images/logo.jpg") no-repeat;
+    }
+    .header-logo a.baiwei-link{
+        display: inline-block;
+        width: 110px;
+        height: 80px;
+        margin-left: 10px;
+        background: url("../images/1466133247773.gif") no-repeat;
+    }
+    .header-search{
+        border: 2px solid #C30000;
+        padding-left: 10px;
+        width: 574px;
+        height: 38px;
+        line-height: 38px;
+        margin-top: 12px;
+    }
+    .header-search b{
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        background: url("../images/index.png") no-repeat -67px -24px;
+        float: left;
+        margin-top: 10px;
+    }
+    .header-search .txt{
+        width: 450px;
+        height: 36px;
+        line-height: 36px;
+        padding-left: 6px;
+        float: left;
+        color: #cccccc;
+    }
+    .header-search .btn{
+        float: left;
+        width: 102px;
+        height: 38px;
+        background-color: #C30000;
+        font-size: 16px;
+        color: #ffffff;
+        font-family: "微软雅黑";
+        cursor: pointer;
+    }
+    .header-search-height{
+        width: 36px;
+        font-family: "微软雅黑";
+        padding-left: 10px;
+        font-size: 14px;
+        margin-top: 12px;
+    }
+    .header-app{
+        width: 160px;
+        height: 80px;
+    }
+    .header-app{
+        display: inline-block;
+        width: 160px;
+        height: 80px;
+        text-indent: -99999em;
+        background: url("../images/app.jpg") no-repeat;
+    }
+    .header-keyword{
+        height: 30px;
+        line-height: 30px;
+    }
+    .header-keyword a{
+        padding: 2px;
+        margin-right: 14px;
+        color: #757575;
+    }
+    .header-keyword a:hover{
+        background: #3a9900;
+        color: #ffffff;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px; ;
+    }
+    .header-bg{
+        height: 38px;
+        margin-top: -4px;
+        background: url("../images/selfheadbk.png") no-repeat;
+    }
+    /*头部logo end*/
+
+    /*头部广告 begin*/
+    /*头部广告 end*/
